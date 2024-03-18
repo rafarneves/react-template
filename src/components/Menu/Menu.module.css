@@ -1,0 +1,85 @@
+.navbar {
+    background-color: black;
+    color: #ffffff;
+    padding: 25px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.navbar .menuNavbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.closeModal {
+    display: none;
+}
+
+.closeBtn {
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.hamburger svg {
+    fill: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+
+.closeBtn svg {
+    fill: #ffffff;
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+    }
+
+    .hamburger.active {
+        
+    }
+
+    .menuNavbar {
+        position: absolute;
+        flex-direction: column;
+        gap: 0;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+        background-color: black;
+        padding: 30px;
+        height: 100%;
+    }
+
+    .closeModal {
+        display: flex;
+        justify-content: end;
+    }
+
+    .menuNavbar.active {
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+}
